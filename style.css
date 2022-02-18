@@ -1,0 +1,332 @@
+
+
+.image-container {
+  background-image: url("D:\nature.jpg");
+  background-size: cover;
+  position: relative;
+  height: 175px;
+}
+
+.text {
+  background-color: red;
+  color: silver;
+  font-size: 5vw; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 5px;
+  width: 55%;
+  text-align: left;
+  position: absolute;
+  top: 38%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+.p1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color:silver;
+  text-shadow: 2px 2px brown;
+  font-size: 2vw; 
+  width: 50%;
+  text-align: left;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.h1 {
+  text-align: center;
+  font-size: 2vw; 
+  width: 50%;
+  position: absolute;
+  top: 27%;
+  left: -5%;
+
+}
+.h2 {
+  text-align: left;
+  font-size: 2vw; 
+  width: 50%;
+  position: absolute;
+  top: 32%;
+  left: 10%;
+}
+.h3 {
+  color:grey;
+  text-align: left;
+  font-size: 1vw;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+.topnav {
+  overflow: hidden;
+  background-color: brown;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1vw;
+}
+.topnav a:hover {
+  background-color: silver;
+  color: black;
+}
+.topnav-right {
+  float: right;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 400px 250px;
+  cursor: pointer;
+}
+/* Get started button style */ 
+
+.button1 {background-color: brown;}
+ 
+  @media only screen and (max-width:900px) {
+  
+    .image-container, .text, .p1, .h3, .smartphone, .button{
+      width: 100%; 
+    }
+  } 
+
+  
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ *
+  
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+  position: fixed;
+  bottom: 0;
+  width: 99%;
+  color: brown;
+}
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+  
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+.footer {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/ 
+  height: 40px;
+  background: brown;
+}
+
+.footer .grid-container .sec h2
+{
+position: relative;
+color: goldenrod;
+font-weight: 500;
+margin-bottom: 15px;
+}
+
+.footer .grid-container .sec h2::before
+{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: goldenrod;
+}
+.sci 
+{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,50px);
+  grid-gap: 10px;
+}
+.sci li
+{
+  list-style: none;
+} 
+.sci li a
+{
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: sliver;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.sci li:hover
+{
+  background: goldenrod;
+}
+.sci li a .fa
+{
+  color: brown;
+  font-size: 20px;
+}
+.quicklinks
+{
+  position: relative;
+}
+.quicklinks li
+{
+  list-style: none;
+}
+.quicklinks li a
+{
+  color: black;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+}
+.quicklinks li a:hover
+{
+  color: goldenrod;
+}
+.info
+{
+  position: relative;
+}
+.info li{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+.info li span:nth-child(1)
+{
+  color:black;
+  font-size: 20px;
+}
+.info li span
+{
+  color:black;
+
+}
+.info a
+{
+  color:black;
+  text-decoration: none;
+}
+.info a:hover
+{
+  color: goldenrod;
+}
+.copyrightText
+{
+  width:100%;
+  text-align: left;
+  color: black;
+}
+
+
+/* Register styling */
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color:goldenrod;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: brown;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
